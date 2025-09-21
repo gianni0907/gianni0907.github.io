@@ -1,57 +1,331 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Giovanbatista Gravina</title>
-	<link href="res/css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="res/academicons-1.9.2/css/academicons.min.css"/>
-	<script src="res/js/fa.js"></script>
-
-	<style>
-		.header {
-			width: auto;
-			max-width: auto;
-		        padding-top: 4rem;
-		        padding-bottom: 2rem;
-		        margin-bottom: 2rem;
-		        background-color: rgba(250, 250, 250)
-      		}
-		
-		a:link,a:visited {
-			color: #0071bc;
-        		text-decoration: none;
-		}
-
-		a:hover {
-			color: #208799;
-		}
-
-		hr {
-		        border: 10;
-		        height: 1px;
-		        background-image: linear-gradient(to right, rgba(0, 113, 188, 0.2), rgba(0, 0, 0, 0.1), rgba(0, 113, 188, 0.2));
-		}
-		
-		.gap-30 {height:30px;}
-	      	.gap-20 {height:20px;}
-	      	.gap-10 {height:10px;}
-	      	.gap-5 {height:5px;}
-
-	      	.no-gutters {
-			margin-right: 0;
-			margin-left: 0;
-	      	}
-		
-		.btn {
-			margin-left: 0.2rem;
-		    	margin-right: 0.2rem;
-	    	}
-	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giovanbattista Gravina</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Academicons - Primary CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
-<div class="header">
-	<div class="container">
-		<center><h1>Work in progress ...</h1></center>
-	</div>
-</div>
+<body>
+    <div class="container py-5">
+        <div class="row">
+            <!-- Personal Info Column (now on the left) -->
+            <div class="col-md-4 mb-4 order-md-1 order-2">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <img src="images/profile.jpg" alt="Your Photo" class="img-fluid rounded-circle mb-3" width="300">
+                        <h2 class="card-title">Giovanbattista Gravina</h2>
+                        <h5 class="card-subtitle mb-2 text-muted">PhD Student at Italian Institute of Technology</h5>
+                        <!-- <p class="card-text">Your short bio or description goes here. Briefly introduce yourself, your research, or your interests.</p> -->
+                        <div class="mb-2">
+                            <a href="mailto:giovanbattista.gravina@iit.it" class="me-2" title="Email"><i class="fa fa-envelope"></i></a>
+                            <a href="https://github.com/gianni0907" class="me-2" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/giovanbattista-gravina/" class="me-2" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://scholar.google.com/citations?user=ih4pNTMAAAAJ&hl=it&oi=ao" class="me-2" title="Google Scholar">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="position: relative; top: -1px;">
+                                    <path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/>
+                                </svg>
+                            </a>
+                            <!-- Add more icons/links as needed -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Main Content Column -->
+            <div class="col-md-8 order-md-2 order-1">
+                <!-- Navigation -->
+                <nav class="navbar navbar-expand-lg navbar-light bg-light rounded mb-4">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#about">About Me</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#education">Education</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#experience">Experience</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#projects">Projects</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#publications">Publications</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="content">
+                    <!-- About Me Section -->
+                    <section id="about" class="mb-5">
+                        <h2 class="section-title mb-4">About Me</h2>
+                        <p class="lead">
+                            Welcome to my personal webpage! I am passionate about [your field/interests]. 
+                            This section provides an overview of my background, research interests, and professional journey.
+                        </p>
+                        <p>
+                            [Add your detailed about me content here. Describe your background, interests, research focus, 
+                            career goals, and what drives your passion in your field.]
+                        </p>
+                    </section>
+
+                    <!-- Education Section -->
+                    <section id="education" class="mb-5">
+                        <h2 class="section-title mb-4">Education</h2>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <h5 class="timeline-title">Ph.D. in [Your Field]</h5>
+                                    <p class="timeline-institution">University Name</p>
+                                    <p class="timeline-date">Expected Year or Year - Year</p>
+                                    <p class="timeline-description">
+                                        Dissertation: "[Your thesis title]"<br>
+                                        Advisor: Dr. [Advisor Name]
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <h5 class="timeline-title">Master's Degree</h5>
+                                    <p class="timeline-institution">University Name</p>
+                                    <p class="timeline-date">Year - Year</p>
+                                    <p class="timeline-description">
+                                        [Description of your master's program and achievements]
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <h5 class="timeline-title">Bachelor's Degree</h5>
+                                    <p class="timeline-institution">University Name</p>
+                                    <p class="timeline-date">Year - Year</p>
+                                    <p class="timeline-description">
+                                        [Description of your undergraduate program and achievements]
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Experience Section -->
+                    <section id="experience" class="mb-5">
+                        <h2 class="section-title mb-4">Experience</h2>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <h5 class="timeline-title">Research Assistant</h5>
+                                    <p class="timeline-institution">Institution/Company Name</p>
+                                    <p class="timeline-date">Year - Present (or Year - Year)</p>
+                                    <p class="timeline-description">
+                                        [Description of your research role, responsibilities, and key achievements]
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <h5 class="timeline-title">Teaching Assistant</h5>
+                                    <p class="timeline-institution">University Name</p>
+                                    <p class="timeline-date">Year - Year</p>
+                                    <p class="timeline-description">
+                                        [Description of courses taught and teaching responsibilities]
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <h5 class="timeline-title">Internship/Previous Role</h5>
+                                    <p class="timeline-institution">Company/Organization Name</p>
+                                    <p class="timeline-date">Year - Year</p>
+                                    <p class="timeline-description">
+                                        [Description of your internship or previous professional experience]
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Selected Projects Section -->
+                    <section id="projects" class="mb-5">
+                        <h2 class="section-title mb-4">Selected Projects</h2>
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="project-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Project Title 1</h5>
+                                        <p class="card-text">
+                                            Brief description of your project, its goals, and key outcomes.
+                                        </p>
+                                        <div class="project-links">
+                                            <a href="#" class="btn btn-outline-primary btn-sm me-2">
+                                                <i class="fab fa-github"></i> Code
+                                            </a>
+                                            <a href="#" class="btn btn-outline-secondary btn-sm">
+                                                <i class="fas fa-external-link-alt"></i> Demo
+                                            </a>
+                                        </div>
+                                        <div class="project-tags mt-2">
+                                            <span class="badge bg-secondary me-1">Python</span>
+                                            <span class="badge bg-secondary me-1">Machine Learning</span>
+                                            <span class="badge bg-secondary">TensorFlow</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="project-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Project Title 2</h5>
+                                        <p class="card-text">
+                                            Brief description of your second project and its significance.
+                                        </p>
+                                        <div class="project-links">
+                                            <a href="#" class="btn btn-outline-primary btn-sm me-2">
+                                                <i class="fab fa-github"></i> Code
+                                            </a>
+                                            <a href="#" class="btn btn-outline-secondary btn-sm">
+                                                <i class="fas fa-file-pdf"></i> Paper
+                                            </a>
+                                        </div>
+                                        <div class="project-tags mt-2">
+                                            <span class="badge bg-secondary me-1">JavaScript</span>
+                                            <span class="badge bg-secondary me-1">React</span>
+                                            <span class="badge bg-secondary">Node.js</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="project-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Project Title 3</h5>
+                                        <p class="card-text">
+                                            Description of your third project and its impact.
+                                        </p>
+                                        <div class="project-links">
+                                            <a href="#" class="btn btn-outline-primary btn-sm me-2">
+                                                <i class="fab fa-github"></i> Code
+                                            </a>
+                                            <a href="#" class="btn btn-outline-secondary btn-sm">
+                                                <i class="fas fa-external-link-alt"></i> Website
+                                            </a>
+                                        </div>
+                                        <div class="project-tags mt-2">
+                                            <span class="badge bg-secondary me-1">Data Science</span>
+                                            <span class="badge bg-secondary me-1">R</span>
+                                            <span class="badge bg-secondary">Visualization</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Selected Publications Section -->
+                    <section id="publications" class="mb-5">
+                        <h2 class="section-title mb-4">Selected Publications</h2>
+                        <div class="publication-list">
+                            <div class="publication-item mb-4">
+                                <h6 class="publication-title">
+                                    "Title of Your Most Important Paper"
+                                </h6>
+                                <p class="publication-authors">
+                                    <strong>Your Name</strong>, Co-author Name, Another Co-author
+                                </p>
+                                <p class="publication-venue">
+                                    <em>Conference/Journal Name</em>, Year
+                                </p>
+                                <p class="publication-description">
+                                    Brief description of the paper's contribution and findings.
+                                </p>
+                                <div class="publication-links">
+                                    <a href="#" class="btn btn-outline-primary btn-sm me-2">
+                                        <i class="fas fa-file-pdf"></i> PDF
+                                    </a>
+                                    <a href="#" class="btn btn-outline-secondary btn-sm me-2">
+                                        <i class="fab fa-github"></i> Code
+                                    </a>
+                                    <a href="#" class="btn btn-outline-info btn-sm">
+                                        <i class="fas fa-quote-left"></i> BibTeX
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="publication-item mb-4">
+                                <h6 class="publication-title">
+                                    "Title of Your Second Important Paper"
+                                </h6>
+                                <p class="publication-authors">
+                                    Co-author Name, <strong>Your Name</strong>, Another Co-author
+                                </p>
+                                <p class="publication-venue">
+                                    <em>Journal Name</em>, Year
+                                </p>
+                                <p class="publication-description">
+                                    Brief description of this paper's contribution.
+                                </p>
+                                <div class="publication-links">
+                                    <a href="#" class="btn btn-outline-primary btn-sm me-2">
+                                        <i class="fas fa-file-pdf"></i> PDF
+                                    </a>
+                                    <a href="#" class="btn btn-outline-secondary btn-sm me-2">
+                                        <i class="fas fa-external-link-alt"></i> DOI
+                                    </a>
+                                    <a href="#" class="btn btn-outline-info btn-sm">
+                                        <i class="fas fa-quote-left"></i> BibTeX
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="publication-item mb-4">
+                                <h6 class="publication-title">
+                                    "Title of Your Third Paper"
+                                </h6>
+                                <p class="publication-authors">
+                                    <strong>Your Name</strong>, Co-author Name
+                                </p>
+                                <p class="publication-venue">
+                                    <em>Workshop/Conference Name</em>, Year
+                                </p>
+                                <p class="publication-description">
+                                    Brief description of this work.
+                                </p>
+                                <div class="publication-links">
+                                    <a href="#" class="btn btn-outline-primary btn-sm me-2">
+                                        <i class="fas fa-file-pdf"></i> PDF
+                                    </a>
+                                    <a href="#" class="btn btn-outline-info btn-sm">
+                                        <i class="fas fa-quote-left"></i> BibTeX
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
 </html>
