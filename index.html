@@ -1,57 +1,514 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Giovanbatista Gravina</title>
-	<link href="res/css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="res/academicons-1.9.2/css/academicons.min.css"/>
-	<script src="res/js/fa.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Giovanbatista Gravina</title>
+    
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-	<style>
-		.header {
-			width: auto;
-			max-width: auto;
-		        padding-top: 4rem;
-		        padding-bottom: 2rem;
-		        margin-bottom: 2rem;
-		        background-color: rgba(250, 250, 250)
-      		}
-		
-		a:link,a:visited {
-			color: #0071bc;
-        		text-decoration: none;
-		}
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
 
-		a:hover {
-			color: #208799;
-		}
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 40px;
+            min-height: 100vh;
+        }
 
-		hr {
-		        border: 10;
-		        height: 1px;
-		        background-image: linear-gradient(to right, rgba(0, 113, 188, 0.2), rgba(0, 0, 0, 0.1), rgba(0, 113, 188, 0.2));
-		}
-		
-		.gap-30 {height:30px;}
-	      	.gap-20 {height:20px;}
-	      	.gap-10 {height:10px;}
-	      	.gap-5 {height:5px;}
+        /* Main content area */
+        .main-content {
+            padding: 40px 0;
+        }
 
-	      	.no-gutters {
-			margin-right: 0;
-			margin-left: 0;
-	      	}
-		
-		.btn {
-			margin-left: 0.2rem;
-		    	margin-right: 0.2rem;
-	    	}
-	</style>
+        /* Aside sidebar */
+        .sidebar {
+            background-color: #f8f9fa;
+            padding: 40px 20px;
+            border-left: 3px solid #0071bc;
+        }
+
+        /* Profile section */
+        .profile {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .profile-picture {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background-color: #e9ecef;
+            border: 4px solid #0071bc;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6c757d;
+            font-size: 14px;
+        }
+
+        .profile h1 {
+            font-size: 1.8em;
+            color: #0071bc;
+            margin-bottom: 10px;
+        }
+
+        .profile .title {
+            color: #666;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        /* Contact info */
+        .contact-info {
+            margin-bottom: 30px;
+        }
+
+        .contact-info h3 {
+            color: #0071bc;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .contact-info p {
+            margin-bottom: 8px;
+            font-size: 0.9em;
+        }
+
+        /* Section styles */
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section h2 {
+            color: #0071bc;
+            font-size: 2em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e9ecef;
+        }
+
+        .section h3 {
+            color: #333;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            margin-top: 25px;
+        }
+
+        .section h3:first-of-type {
+            margin-top: 0;
+        }
+
+        /* Experience/Education items */
+        .item {
+            margin-bottom: 25px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #0071bc;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+
+        .item-title {
+            font-weight: bold;
+            color: #0071bc;
+        }
+
+        .item-company {
+            font-weight: 600;
+            color: #666;
+        }
+
+        .item-date {
+            color: #666;
+            font-size: 0.9em;
+            white-space: nowrap;
+        }
+
+        .item-description {
+            color: #555;
+        }
+
+        /* Project cards */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            background-color: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .project-title {
+            color: #0071bc;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Publications */
+        .publication {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 6px;
+            border-left: 3px solid #0071bc;
+        }
+
+        .publication-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .publication-authors {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+
+        .publication-venue {
+            color: #0071bc;
+            font-weight: 500;
+        }
+
+        /* Links */
+        a {
+            color: #0071bc;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #208799;
+            text-decoration: underline;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .sidebar {
+                order: -1;
+                background-color: #0071bc;
+                color: white;
+                margin: 0 -20px;
+                padding: 30px 20px;
+                border-left: none;
+            }
+
+            .sidebar h3 {
+                color: white;
+            }
+
+            .contact-info p {
+                color: #e9ecef;
+            }
+
+            .profile h1 {
+                color: white;
+            }
+
+            .profile .title {
+                color: #e9ecef;
+            }
+
+            .profile-picture {
+                border-color: white;
+            }
+
+            .item-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .item-date {
+                margin-top: 5px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .main-content {
+                padding: 20px 0;
+            }
+
+            .section h2 {
+                font-size: 1.6em;
+            }
+
+            .profile-picture {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
 </head>
-<div class="header">
-	<div class="container">
-		<center><h1>Work in progress ...</h1></center>
-	</div>
-</div>
+<body>
+    <div class="container">
+        <!-- Main content -->
+        <main class="main-content">
+            <!-- About Me Section -->
+            <section class="section" id="about">
+                <h2>About Me</h2>
+                <p>Welcome to my personal webpage! I'm Giovanbatista Gravina, a [Your Profession/Title] passionate about [Your Main Interests/Field]. This space showcases my academic journey, professional experience, and research contributions.</p>
+                
+                <p>I am currently [Current Position/Status] and my research interests include [Research Areas]. I enjoy [Personal Interests] and am always eager to collaborate on innovative projects that [Your Goals/Mission].</p>
+                
+                <p>[Add more personal information, career highlights, or professional philosophy here. This section should give visitors a clear understanding of who you are and what drives your work.]</p>
+            </section>
+
+            <!-- Education Section -->
+            <section class="section" id="education">
+                <h2>Education</h2>
+                
+                <div class="item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">[Degree Title, e.g., Ph.D. in Computer Science]</div>
+                            <div class="item-company">[University Name]</div>
+                        </div>
+                        <div class="item-date">[Start Year] - [End Year]</div>
+                    </div>
+                    <div class="item-description">
+                        <p><strong>Thesis:</strong> [Thesis Title]</p>
+                        <p><strong>Advisor:</strong> [Advisor Name]</p>
+                        <p>[Brief description of your research, key achievements, or notable coursework]</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">[Degree Title, e.g., Master's in Engineering]</div>
+                            <div class="item-company">[University Name]</div>
+                        </div>
+                        <div class="item-date">[Start Year] - [End Year]</div>
+                    </div>
+                    <div class="item-description">
+                        <p><strong>GPA:</strong> [GPA if relevant]</p>
+                        <p>[Brief description of specialization, key projects, or achievements]</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">[Bachelor's Degree]</div>
+                            <div class="item-company">[University Name]</div>
+                        </div>
+                        <div class="item-date">[Start Year] - [End Year]</div>
+                    </div>
+                    <div class="item-description">
+                        <p>[Brief description of your undergraduate studies, honors, or significant achievements]</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section class="section" id="experience">
+                <h2>Experience</h2>
+                
+                <div class="item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">[Job Title, e.g., Research Scientist]</div>
+                            <div class="item-company">[Company/Institution Name]</div>
+                        </div>
+                        <div class="item-date">[Start Date] - [End Date/Present]</div>
+                    </div>
+                    <div class="item-description">
+                        <p>[Describe your key responsibilities, achievements, and impact in this role. Include specific projects, technologies used, or results achieved.]</p>
+                        <ul style="margin-top: 10px; margin-left: 20px;">
+                            <li>[Key achievement or responsibility]</li>
+                            <li>[Another important contribution]</li>
+                            <li>[Specific project or result]</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">[Previous Job Title]</div>
+                            <div class="item-company">[Company/Institution Name]</div>
+                        </div>
+                        <div class="item-date">[Start Date] - [End Date]</div>
+                    </div>
+                    <div class="item-description">
+                        <p>[Describe this role and your contributions]</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">[Earlier Position or Internship]</div>
+                            <div class="item-company">[Company/Institution Name]</div>
+                        </div>
+                        <div class="item-date">[Start Date] - [End Date]</div>
+                    </div>
+                    <div class="item-description">
+                        <p>[Brief description of this experience]</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section class="section" id="projects">
+                <h2>Projects</h2>
+                
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-title">[Project Name 1]</div>
+                        <p><strong>Technologies:</strong> [List of technologies, frameworks, or tools used]</p>
+                        <p>[Brief description of the project, its goals, your role, and outcomes. Include any notable features or innovations.]</p>
+                        <p><a href="[Project URL or GitHub link]">View Project →</a></p>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-title">[Project Name 2]</div>
+                        <p><strong>Technologies:</strong> [Technologies used]</p>
+                        <p>[Project description and your contributions]</p>
+                        <p><a href="[Project URL or GitHub link]">View Project →</a></p>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-title">[Project Name 3]</div>
+                        <p><strong>Technologies:</strong> [Technologies used]</p>
+                        <p>[Project description and impact]</p>
+                        <p><a href="[Project URL or GitHub link]">View Project →</a></p>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-title">[Project Name 4]</div>
+                        <p><strong>Technologies:</strong> [Technologies used]</p>
+                        <p>[Project description]</p>
+                        <p><a href="[Project URL or GitHub link]">View Project →</a></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Publications Section -->
+            <section class="section" id="publications">
+                <h2>Publications</h2>
+                
+                <div class="publication">
+                    <div class="publication-title">[Paper Title 1: A Comprehensive Study of...]</div>
+                    <div class="publication-authors">[Your Name], [Co-author 1], [Co-author 2]</div>
+                    <div class="publication-venue">[Conference/Journal Name], [Year] | <a href="[Paper URL]">PDF</a> | <a href="[DOI URL]">DOI</a></div>
+                </div>
+
+                <div class="publication">
+                    <div class="publication-title">[Paper Title 2: Novel Approaches to...]</div>
+                    <div class="publication-authors">[Co-author 1], [Your Name], [Co-author 2]</div>
+                    <div class="publication-venue">[Conference/Journal Name], [Year] | <a href="[Paper URL]">PDF</a></div>
+                </div>
+
+                <div class="publication">
+                    <div class="publication-title">[Paper Title 3: Analysis of...]</div>
+                    <div class="publication-authors">[Your Name], [Co-author 1]</div>
+                    <div class="publication-venue">[Conference/Journal Name], [Year] | <a href="[Paper URL]">PDF</a> | <a href="[Code URL]">Code</a></div>
+                </div>
+
+                <div class="publication">
+                    <div class="publication-title">[Paper Title 4: Advances in...]</div>
+                    <div class="publication-authors">[Your Name] et al.</div>
+                    <div class="publication-venue">[Conference/Journal Name], [Year] | <a href="[Paper URL]">PDF</a></div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="profile">
+                <div class="profile-picture">
+                    Profile Picture Placeholder
+                </div>
+                <h1>Giovanbatista Gravina</h1>
+                <div class="title">[Your Professional Title]</div>
+            </div>
+
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p><strong>Email:</strong> [your.email@domain.com]</p>
+                <p><strong>Phone:</strong> [+XX XXX XXX XXXX]</p>
+                <p><strong>Location:</strong> [City, Country]</p>
+                <p><strong>LinkedIn:</strong> <a href="[LinkedIn URL]">[Your LinkedIn]</a></p>
+                <p><strong>GitHub:</strong> <a href="[GitHub URL]">[Your GitHub]</a></p>
+                <p><strong>ORCID:</strong> <a href="[ORCID URL]">[Your ORCID]</a></p>
+            </div>
+
+            <div class="contact-info">
+                <h3>Research Interests</h3>
+                <p>• [Research Interest 1]</p>
+                <p>• [Research Interest 2]</p>
+                <p>• [Research Interest 3]</p>
+                <p>• [Research Interest 4]</p>
+            </div>
+
+            <div class="contact-info">
+                <h3>Skills</h3>
+                <p><strong>Programming:</strong> [Languages]</p>
+                <p><strong>Frameworks:</strong> [Frameworks]</p>
+                <p><strong>Tools:</strong> [Tools & Software]</p>
+                <p><strong>Languages:</strong> [Spoken Languages]</p>
+            </div>
+
+            <div class="contact-info">
+                <h3>Quick Links</h3>
+                <p><a href="#about">About Me</a></p>
+                <p><a href="#education">Education</a></p>
+                <p><a href="#experience">Experience</a></p>
+                <p><a href="#projects">Projects</a></p>
+                <p><a href="#publications">Publications</a></p>
+                <p><a href="[CV URL]">Download CV (PDF)</a></p>
+            </div>
+        </aside>
+    </div>
+</body>
 </html>
