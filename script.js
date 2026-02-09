@@ -129,10 +129,30 @@ function initProjectCardAnimations() {
             this.style.transform = 'translateY(0) scale(1)';
         });
         
-        // Add click to expand functionality (optional)
-        card.addEventListener('click', function() {
-            // You can add modal or expand functionality here
-            console.log('Project card clicked:', this.querySelector('.card-title').textContent);
+        // Navigate to linked website when the card is clicked
+        card.addEventListener('click', function(event) {
+            const interactiveElement = event.target.closest('.project-links a');
+            if (interactiveElement) {
+                return; // Allow inner buttons to behave normally
+            }
+
+            const { url } = this.dataset;
+            if (url && url !== '#') {
+                window.open(url, '_blank', 'noopener');
+            }
+        });
+
+        // Support keyboard navigation for accessible cards
+        card.addEventListener('keydown', function(event) {
+            if (event.key !== 'Enter' && event.key !== ' ') {
+                return;
+            }
+
+            const { url } = this.dataset;
+            if (url && url !== '#') {
+                event.preventDefault();
+                window.open(url, '_blank', 'noopener');
+            }
         });
     });
 }

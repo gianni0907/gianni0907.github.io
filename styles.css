@@ -148,6 +148,15 @@ a:hover {
     overflow: hidden;
 }
 
+.project-card[data-url] {
+    cursor: pointer;
+}
+
+.project-card[data-url]:focus {
+    outline: 3px solid #3498db;
+    outline-offset: 4px;
+}
+
 .project-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
