@@ -13,7 +13,7 @@ M.Sc. in Artificial Intelligence and Robotics from [Sapienza University of Rome]
 ## News
 
 - **[Jul. 2026]** Our paper on crowd navigation in multi-room environments is published in *Frontiers in Robotics and AI*.
-- **[Jun. 2026]** Our paper on fault-tolerant locomotion is accepted to IROS 2026.
+- **[Jun. 2026]** Our paper on fault-tolerant locomotion is accepted to *IROS 2026*.
 
 {% include publications.md %}
 
