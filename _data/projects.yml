@@ -1,0 +1,23 @@
+# Same shape as publications.yml. Fields: title, description (required);
+# url, code, paper, image, tags (all optional).
+
+main:
+  - title: Multi-Skill Distillation
+    description: Coupling Reinforcement Learning and Supervised Learning to condense multiple behaviors in a single policy.
+    tags: [RL, IsaacLab]
+
+  - title: Fault-Tolerant Quadruped Locomotion
+    url: https://gianni0907.github.io/fault_tolerant_locomotion
+    description: Reinforcement Learning control policies for quadruped robots that adapt to joint failures, for robust locomotion in challenging environments.
+    tags: [RL, MuJoCo Warp, Python]
+
+  - title: Safe Navigation in Multi-Room Crowded Environments
+    url: https://gianni0907.github.io/crowd_navigation
+    code: https://github.com/gianni0907/crowdnav
+    description: Sensor-based MPC-CBF framework for mobile robot navigation in dynamic environments, leveraging LiDAR and RGB-D data.
+    tags: [MPC, Acados, Python, ROS, Gazebo]
+
+  - title: Planning Throwing Motions for Mobile Manipulators
+    code: https://github.com/gianni0907/Planning_Throwing_Motions_Mobile_Manipulator
+    description: Offline trajectory optimization for balance-safe throwing motions in mobile manipulators, using fmincon from the MATLAB Optimization Toolbox.
+    tags: [Trajectory Optimization, MATLAB]

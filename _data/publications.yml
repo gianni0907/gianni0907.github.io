@@ -1,0 +1,42 @@
+# Add a publication by appending an entry here — nothing else needs editing.
+# Fields: title, authors, venue (required); venue_short, pdf, doi, code, website,
+# bibtex, image, notes, description (all optional).
+# `image` shows a thumbnail on the left; `venue_short` puts a badge on it.
+# Newest first — the page renders them in this order.
+
+main:
+
+  - title: Learning Fault-Tolerant Locomotion with Adaptive Gait Timing
+    authors: <strong>G. Gravina</strong>, L. Rossini, C. Rizzardo, A. Laurenzi, N. Tsagarakis
+    venue: IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2026.
+    website: https://gianni0907.github.io/fault_tolerant_locomotion/
+    image: ./images/fault.webp
+    venue_short: IROS
+
+  - title: "KYON: Semi-Modular Wheel-Legged Quadruped With Agile Bi-Manual Capability"
+    authors: L. Rossini, A. Laurenzi, F. Ruscelli, Y. Zhang, J. Jiang, <strong>G. Gravina</strong>, L. Baccelliere, C. Burchielli, S. Cordasco, L. Muratore, N. Tsagarakis
+    venue: arXiv Preprint, 2026.
+    notes: Submitted to Robotics and Automation Letters (RA-L)
+    doi: https://arxiv.org/abs/2606.30243
+
+  - title: "Crowd navigation in a multi-room environment: An MPC framework for mobile robots"
+    authors: <strong>G. Gravina</strong>, F. D'Orazio, M. Cipriano, T. Belvedere, G. Oriolo
+    venue: Frontiers in Robotics and AI, Special Issue on &ldquo;Social Robot Navigation &ndash; Opportunities, Algorithms, Tools, and Systems&rdquo;, 2026.
+    doi: https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2026.1812386/full
+    website: https://gianni0907.github.io/crowd_navigation/
+    code: https://github.com/gianni0907/crowdnav
+    image: ./images/crowdnav.jpg
+    venue_short: Frontiers
+
+  - title: A vision-based control scheme for safe navigation in a crowd
+    authors: P. Carboni, G. Nardini, E. Santini, <strong>G. Gravina</strong>, T. Belvedere, M. Cipriano, F. d'Orazio, G. Oriolo
+    venue: Human-Friendly Robotics (HFR), 2024.
+    pdf: https://hal.science/hal-04773953/document
+    doi: https://doi.org/10.1007/978-3-031-81688-8_6
+    description: Vision-based pipeline for safely controlling a robot moving in a crowd. Design of an adaptive camera control strategy to enhance human detection and QP-CBF controller to achieve obstacle avoidance.
+
+  # - title: Energy-based Residual for Collision Detection Using a Velocity Observer
+  #   authors: <strong>G. Gravina</strong>, L. Nunziante, A. De Luca
+  #   venue: 6-th Italian Conference on Robotics and Intelligent Machines (I-RIM), 2024.
+  #   pdf: https://proceedings.i-rim.it/content/details/2024/14730983
+  #   doi: https://zenodo.org/records/14730983

@@ -1,0 +1,27 @@
+# Basic information — shown in the sidebar and the <title>
+title: Giovanbattista Gravina
+position: PhD Student
+affiliation: Italian Institute of Technology
+affiliation_link: https://hhcm.iit.it/en-US/
+email: giovanbattista.gravina (at) iit.it
+email_link: mailto:giovanbattista.gravina@iit.it
+
+# Search engine metadata
+keywords: robotics, reinforcement learning, model predictive control, loco-manipulation, legged robots, PhD
+description: Giovanbattista Gravina — PhD student at the Humanoids and Human-Centered Mechatronics Lab, Italian Institute of Technology.
+canonical: https://gianni0907.github.io/
+google_site_verification: R2244kHYX6IN0-KOCXWezGXeER6arpeRa5lnjyAdBdQ
+
+# Sidebar links. Delete a line to drop that icon.
+google_scholar: https://scholar.google.com/citations?user=ih4pNTMAAAAJ&hl=it&oi=ao
+github_link: https://github.com/gianni0907
+linkedin: https://www.linkedin.com/in/giovanbattista-gravina/
+cv_link: ./documents/giovanbattista_gravina_cv.pdf
+
+avatar: ./images/profile.webp
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - assets/THEME-LICENSE
