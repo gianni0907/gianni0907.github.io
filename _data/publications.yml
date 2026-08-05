@@ -33,7 +33,6 @@ main:
     venue: Human-Friendly Robotics (HFR), 2024.
     pdf: https://hal.science/hal-04773953/document
     doi: https://doi.org/10.1007/978-3-031-81688-8_6
-    description: Vision-based pipeline for safely controlling a robot moving in a crowd. Design of an adaptive camera control strategy to enhance human detection and QP-CBF controller to achieve obstacle avoidance.
 
   # - title: Energy-based Residual for Collision Detection Using a Velocity Observer
   #   authors: <strong>G. Gravina</strong>, L. Nunziante, A. De Luca
