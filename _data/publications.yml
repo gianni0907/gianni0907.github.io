@@ -9,6 +9,7 @@ main:
   - title: Learning Fault-Tolerant Locomotion with Adaptive Gait Timing
     authors: <strong>G. Gravina</strong>, L. Rossini, C. Rizzardo, A. Laurenzi, N. Tsagarakis
     venue: IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2026.
+    doi: https://arxiv.org/abs/2608.07328
     website: https://gianni0907.github.io/fault_tolerant_locomotion/
     image: ./images/fault.webp
     venue_short: IROS
