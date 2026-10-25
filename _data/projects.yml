@@ -1,13 +1,19 @@
 # Same shape as publications.yml. Fields: title, description (required);
-# url, code, paper, image, tags (all optional).
+# url, code, paper, youtube, image, video, tags (all optional). video overrides image.
 
 main:
+  - title: Long-Horizon Loco-Manipulation
+    description: Learning to adapt and interact in long-horizon loco-manipulation tasks with KYON, a quadruped equipped with two arms, from pick-carry-place to environment-interactive navigation (e.g., removing obstacles or using objects to reach a goal). Investigating (flow) policy learning and optimization over a learned world model, with a high-level policy emitting end-effector trajectories and base commands tracked by RL-based low-level controllers.
+    tags: [RL, Flow Policies, World Models]
+
   - title: Multi-Skill Distillation
-    description: Coupling Reinforcement Learning and Supervised Learning to condense multiple behaviors in a single policy.
-    tags: [RL, IsaacLab]
+    description: Unifying multiple behaviors in a single policy via multi-expert distillation, coupling reinforcement learning and imitation learning. Applied to fall recovery and locomotion under joint failures for a quadruped, the policy autonomously selects the appropriate skill (getting up, quadrupedal or bipedal locomotion) by implicitly reconstructing the failure condition from proprioception only, without fault information or skill selection.
+    video: /videos/mjdds_2faults_trmd_small.mp4
+    tags: [RL, Imitation Learning, IsaacLab]
 
   - title: Fault-Tolerant Quadruped Locomotion
     url: https://gianni0907.github.io/fault_tolerant_locomotion
+    youtube: https://www.youtube.com/watch?v=x4paP49SKuY
     description: Reinforcement Learning control policies for quadruped robots that adapt to joint failures, for robust locomotion in challenging environments.
     tags: [RL, MuJoCo Warp, Python]
 

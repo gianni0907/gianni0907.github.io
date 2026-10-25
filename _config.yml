@@ -20,6 +20,17 @@ cv_link: ./documents/giovanbattista_gravina_cv.pdf
 
 avatar: ./images/profile.webp
 
+# Used by the JSON-LD Person block in _layouts/homepage.html.
+orcid: https://orcid.org/0009-0000-9982-9588
+
+# Generates /sitemap.xml and /robots.txt for Search Console.
+# Whitelisted by GitHub Pages, so no Actions workflow is needed.
+plugins:
+  - jekyll-sitemap
+
+# jekyll-sitemap needs this to write absolute URLs into sitemap.xml
+url: https://gianni0907.github.io
+
 exclude:
   - Gemfile
   - Gemfile.lock

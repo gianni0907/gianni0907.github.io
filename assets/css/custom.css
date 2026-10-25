@@ -47,6 +47,16 @@ svg[hidden] {
   background-color: #e74d3c;
 }
 
+/* Video teasers keep their native 4:3 frame instead of the 270x123 image crop */
+.publications ol.bibliography li video.teaser {
+  height: auto;
+  aspect-ratio: 4 / 3;
+}
+
+.publications ol.bibliography li .abbr:has(video) {
+  height: auto;
+}
+
 .pub-description {
   margin-top: 0.15rem;
   margin-bottom: 0.35rem;

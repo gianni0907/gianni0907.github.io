@@ -12,6 +12,7 @@ M.Sc. in Artificial Intelligence and Robotics from [Sapienza University of Rome]
 
 ## News
 
+- **[Sep. 2026]** Presented our paper "Learning Fault-Tolerant Locomotion with Adaptive Gait Timing" as an oral presentation at *IROS 2026* in Pittsburgh, USA.
 - **[Jul. 2026]** Our paper on crowd navigation in multi-room environments is published in *Frontiers in Robotics and AI*.
 - **[Jun. 2026]** Our paper on fault-tolerant locomotion is accepted to *IROS 2026*.
 

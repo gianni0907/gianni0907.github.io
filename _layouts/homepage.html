@@ -10,6 +10,40 @@
     {% if site.google_site_verification %}<meta name="google-site-verification" content="{{ site.google_site_verification }}">{% endif %}
     {% if site.canonical %}<link rel="canonical" href="{{ site.canonical }}"/>{% endif %}
 
+    <!-- Open Graph, for link previews when the page is shared -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="{{ site.title }}">
+    <meta property="og:description" content="{{ site.description }}">
+    {% if site.canonical %}<meta property="og:url" content="{{ site.canonical }}">{% endif %}
+    <meta property="og:image" content="{{ site.avatar | replace: './', '' | absolute_url }}">
+
+    <!-- Structured data: tells search engines this page is about a person, and
+         `sameAs` merges this identity with the linked profiles. Main on-page
+         signal for a name query. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": {{ site.title | jsonify }},
+      "jobTitle": {{ site.position | jsonify }},
+      "url": {{ site.canonical | jsonify }},
+      "image": {{ site.avatar | replace: './', '' | absolute_url | jsonify }},
+      "description": {{ site.description | jsonify }},
+      "affiliation": {
+        "@type": "Organization",
+        "name": {{ site.affiliation | jsonify }},
+        "url": {{ site.affiliation_link | jsonify }}
+      },
+      "sameAs": [
+        {%- capture profile_list -%}
+        {{ site.google_scholar }}|{{ site.github_link }}|{{ site.linkedin }}|{{ site.orcid }}
+        {%- endcapture -%}
+        {%- assign profiles = profile_list | split: "|" | where_exp: "p", "p != ''" -%}
+        {%- for p in profiles %}{{ p | jsonify }}{% unless forloop.last %},{% endunless %}{% endfor -%}
+      ]
+    }
+    </script>
+
     <!-- Crimson Pro carries the theme's look; Ubuntu Mono is used for the email line.
          Linked directly rather than @import-ed from CSS so they are not serialised behind it. -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
